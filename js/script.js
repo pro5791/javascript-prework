@@ -51,8 +51,6 @@ if( computerMove == 'kamień' && playerMove == 'kamień'){
     printMessage('Komputer wygrywa!');
 }   else if ( computerMove == 'nożyce' && playerMove == 'nożyce') {
     printMessage('Remis :)');
-}   else if ( computerMove == 'nożyce' && playerMove == 'nożyce') {
-    printMessage('Remis :)');
 }   else if ( computerMove == 'kamień' && playerMove == 'nieznany ruch') {
     printMessage('Inna liczba!? Wybierz liczbę 1: kamień, 2: papier, 3: nożyce');
 }   else if ( computerMove == 'papier' && playerMove == 'nieznany ruch') {
