@@ -45,31 +45,6 @@ function playGame(playerInput) {
         else {
             return 'Komputer wygrywa!';
         }
-
-/*if (argComputerMove == 'kamień' && argPlayerMove == 'papier') {
-    return 'Ty wygrywasz!';
-}
-if (argComputerMove == 'kamień' && argPlayerMove == 'nożyce') {
-    return 'Komputer wygrywa!';
-}
-if (argComputerMove == 'papier' && argPlayerMove == 'kamień') {
-    return 'Komputer wygrywa!';
-}
-if (argComputerMove == 'papier' && argPlayerMove == 'nożyce') {
-    return 'Ty wygrywasz!';
-}
-if (argComputerMove == 'nożyce' && argPlayerMove == 'papier') {
-    return 'Komputer wygrywa!';
-}
-if (argComputerMove == 'nożyce' && argPlayerMove == 'kamień') {
-    return 'Ty wygrywasz!';
-}
-if (argComputerMove == argPlayerMove) {
-    return 'Remis :)';
-}
-if (argPlayerMove == 'nieznany ruch') {
-    return 'Inna liczba!? Wybierz liczbę 1: kamień, 2: papier, 3: nożyce';
-}*/
     }
 
 printMessage('Wynik: ' + displayResult(argComputerMove, argPlayerMove));
