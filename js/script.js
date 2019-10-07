@@ -21,52 +21,69 @@ function playGame(playerInput) {
 
     printMessage('Ruch komputera: ' + argComputerMove);
 
-   / let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.'); /
     console.log('Gracz wpisał: ' + playerInput);
 
     let argPlayerMove = getMoveName(playerInput);
 
     printMessage('Twój ruch to: ' + argPlayerMove);
 
+
     function displayResult(argComputerMove, argPlayerMove) {
         console.log('ruch komputera i gracza:', argComputerMove, argPlayerMove);
 
-        if (argComputerMove == 'kamień' && argPlayerMove == 'papier') {
-            return 'Ty wygrywasz!';
-        }
-        if (argComputerMove == 'kamień' && argPlayerMove == 'nożyce') {
-            return 'Komputer wygrywa!';
-        }
-        if (argComputerMove == 'papier' && argPlayerMove == 'kamień') {
-            return 'Komputer wygrywa!';
-        }
-        if (argComputerMove == 'papier' && argPlayerMove == 'nożyce') {
-            return 'Ty wygrywasz!';
-        }
-        if (argComputerMove == 'nożyce' && argPlayerMove == 'papier') {
-            return 'Komputer wygrywa!';
-        }
-        if (argComputerMove == 'nożyce' && argPlayerMove == 'kamień') {
-            return 'Ty wygrywasz!';
-        }
-        if (argComputerMove == argPlayerMove) {
+        const a = randomNumber;
+        const b = playerInput;
+
+        console.log('ruch komputera i gracza:', randomNumber, playerInput);
+        if (a === b) {
             return 'Remis :)';
         }
-        if (argPlayerMove == 'nieznany ruch') {
-            return 'Inna liczba!? Wybierz liczbę 1: kamień, 2: papier, 3: nożyce';
+        if (a + b + b === 5) {
+            return 'Ty wygrywasz!';
         }
-    }
+        if (a + b + b === 8) {
+            return 'Ty wygrywasz!';
+        }
+        else {
+                return 'Komputer wygrywa!';
+            }
 
-    printMessage('Wynik: ' + displayResult(argComputerMove, argPlayerMove));
+/*if (argComputerMove == 'kamień' && argPlayerMove == 'papier') {
+    return 'Ty wygrywasz!';
+}
+if (argComputerMove == 'kamień' && argPlayerMove == 'nożyce') {
+    return 'Komputer wygrywa!';
+}
+if (argComputerMove == 'papier' && argPlayerMove == 'kamień') {
+    return 'Komputer wygrywa!';
+}
+if (argComputerMove == 'papier' && argPlayerMove == 'nożyce') {
+    return 'Ty wygrywasz!';
+}
+if (argComputerMove == 'nożyce' && argPlayerMove == 'papier') {
+    return 'Komputer wygrywa!';
+}
+if (argComputerMove == 'nożyce' && argPlayerMove == 'kamień') {
+    return 'Ty wygrywasz!';
+}
+if (argComputerMove == argPlayerMove) {
+    return 'Remis :)';
+}
+if (argPlayerMove == 'nieznany ruch') {
+    return 'Inna liczba!? Wybierz liczbę 1: kamień, 2: papier, 3: nożyce';
+}*/
+}
+
+printMessage('Wynik: ' + displayResult(argComputerMove, argPlayerMove));
 
 }
 
 document.getElementById('play-rock').addEventListener('click', function(){
-    playGame(1)}
-    );
+playGame(1)}
+);
 document.getElementById('play-paper').addEventListener('click', function(){
-    playGame(2)}
-    );
+playGame(2)}
+);
 document.getElementById('play-scissors').addEventListener('click', function(){
-    playGame(3)}
-    );
+playGame(3)}
+);
