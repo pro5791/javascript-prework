@@ -28,13 +28,11 @@ function playGame(playerInput) {
     printMessage('Twój ruch to: ' + argPlayerMove);
 
 
-    function displayResult(argComputerMove, argPlayerMove) {
-        console.log('ruch komputera i gracza:', argComputerMove, argPlayerMove);
-
+    function displayResult() {
         const a = randomNumber;
         const b = playerInput;
-
         console.log('ruch komputera i gracza:', randomNumber, playerInput);
+
         if (a === b) {
             return 'Remis :)';
         }
@@ -45,8 +43,8 @@ function playGame(playerInput) {
             return 'Ty wygrywasz!';
         }
         else {
-                return 'Komputer wygrywa!';
-            }
+            return 'Komputer wygrywa!';
+        }
 
 /*if (argComputerMove == 'kamień' && argPlayerMove == 'papier') {
     return 'Ty wygrywasz!';
@@ -72,7 +70,7 @@ if (argComputerMove == argPlayerMove) {
 if (argPlayerMove == 'nieznany ruch') {
     return 'Inna liczba!? Wybierz liczbę 1: kamień, 2: papier, 3: nożyce';
 }*/
-}
+    }
 
 printMessage('Wynik: ' + displayResult(argComputerMove, argPlayerMove));
 
